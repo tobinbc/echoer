@@ -8,16 +8,26 @@ import { AppController } from './app.controller';
       config: {},
       services: [
         {
-          id: 'revolut-merchant',
-          url: `https://merchant.revolut.com/api/1.0`,
-        },
-        {
-          id: 'revolut-merchant-sandbox',
-          url: `https://sandbox-merchant.revolut.com/api/1.0`,
+          id: 'revolut-business-auth',
+          url: 'https://b2b.revolut.com/api/1.0/auth/token',
+          config: {
+            headers: {
+              'Content-Type': 'application/x-www-form-urlencoded',
+            },
+          },
         },
         {
           id: 'revolut-business',
           url: 'https://b2b.revolut.com/api/1.0',
+        },
+        {
+          id: 'revolut-business-auth-sandbox',
+          url: 'https://sandbox-b2b.revolut.com/api/1.0/auth/token',
+          config: {
+            headers: {
+              'Content-Type': 'application/x-www-form-urlencoded',
+            },
+          },
         },
         {
           id: 'revolut-business-sandbox',
